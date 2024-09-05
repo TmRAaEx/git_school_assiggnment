@@ -2,13 +2,14 @@ body {
   margin: 0;
   padding: 0;
 }
+
 #layout {
   display: grid;
   grid-template-columns: 12vw auto auto;
   grid-auto-rows: auto;
   grid-template-areas:
     "header header header"
-    "aside . . "
+    "aside content content"
     ". . . ";
 }
 
@@ -17,9 +18,14 @@ header {
   height: 100px;
   background-color: blue;
 }
-aside{
-    grid-area: aside;
-    height: calc(100vh - 100px);
-    background-color: hotpink;
+aside {
+  grid-area: aside;
+  height: calc(100vh - 100px);
+  background-color: hotpink;
 }
- 
+#content {
+  grid-area: content;
+  background-color: greenyellow;
+  min-height: 500px;
+  width: 88vw; /*all spacing left after sidebar*/
+}
