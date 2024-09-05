@@ -1,14 +1,18 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
-* {
-  box-sizing: border-box;
+
+:root {
+  --header-height: max(10vh, 100px);
+  --footer-heigth: 150px;
+  --sidebar-width: max(12vw, 150px);
 }
+
 #layout {
   display: grid;
-  grid-template-columns: max(12vw, 150px) auto auto;
+  grid-template-columns: var(--sidebar-width) auto auto;
   grid-auto-rows: auto;
   grid-template-areas:
     "header header header"
@@ -18,21 +22,22 @@ body {
 
 header {
   grid-area: header;
-  height: 100px;
+  height: var(--header-height);
   background-color: blue;
 }
 aside {
   grid-area: aside;
-  height: calc(100vh - 200px);
+  height: calc(100vh - calc(var(--header-height) + var(--footer-heigth)));
   background-color: hotpink;
 }
 #content {
   grid-area: content;
   background-color: greenyellow;
-  width: 88vw; /*all spacing left after sidebar*/
-  height: calc(100vh - 200px);
-  overflow-y: auto;
+  width: calc(100vw - var(--sidebar-width)); /*all spacing left after sidebar*/
+  height: calc(100vh - calc(var(--header-height) + var(--footer-heigth)));
   padding: 1em;
+  padding-right: 2em;
+  overflow-y: auto;
 }
 #overflowing_content {
   display: flex;
@@ -55,6 +60,9 @@ aside {
 }
 #footer {
   grid-area: footer;
-  height: 100px;
+  height: var(--footer-heigth);
   background-color: red;
+}
+* {
+  box-sizing: border-box;
 }
