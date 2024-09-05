@@ -27,8 +27,8 @@ aside {
 #content {
   grid-area: content;
   background-color: greenyellow;
-  min-height: 500px;
   width: 88vw; /*all spacing left after sidebar*/
+  overflow-y: auto;
 }
 #footer {
   grid-area: footer;
