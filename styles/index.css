@@ -1,4 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 #layout {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 15vw auto auto;
+  grid-auto-rows: auto;
+  grid-template-areas:
+    "header header header"
+    ". . . "
+    ". . . "
+    ". . . ";
+}
+
+header {
+  grid-area: header;
+  height: 100px;
+  background-color: blue;
 }
