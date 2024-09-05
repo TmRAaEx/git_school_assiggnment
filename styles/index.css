@@ -24,7 +24,15 @@ header {
   grid-area: header;
   height: var(--header-height);
   background-color: blue;
+  display: flex;
+  align-items: center;
+  padding: 1em;
 }
+#link {
+  font-size: 2rem;
+  color: white;
+}
+
 aside {
   grid-area: aside;
   height: calc(100vh - calc(var(--header-height) + var(--footer-heigth)));
