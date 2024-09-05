@@ -8,8 +8,7 @@ body {
   grid-auto-rows: auto;
   grid-template-areas:
     "header header header"
-    ". . . "
-    ". . . "
+    "aside . . "
     ". . . ";
 }
 
@@ -17,5 +16,10 @@ header {
   grid-area: header;
   height: 100px;
   background-color: blue;
+}
+aside{
+    grid-area: aside;
+    height: calc(100vh - 100px);
+    background-color: hotpink;
 }
  
