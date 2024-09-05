@@ -4,7 +4,7 @@ body {
 }
 #layout {
   display: grid;
-  grid-template-columns: 15vw auto auto;
+  grid-template-columns: 12vw auto auto;
   grid-auto-rows: auto;
   grid-template-areas:
     "header header header"
@@ -18,3 +18,4 @@ header {
   height: 100px;
   background-color: blue;
 }
+ 
